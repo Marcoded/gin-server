@@ -15,6 +15,8 @@ func init() {
 func main() {
 
 	router := gin.Default()
+	controllers.InitializeArticlesController(router)
+
 	router.GET("/", gretting)
 	router.POST("/posts", controllers.PostCreate)
 	router.GET("/posts", controllers.Index)
